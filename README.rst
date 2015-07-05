@@ -25,8 +25,8 @@ Only 3 operations are implemented at this time:
 
 Warning:
 
-   * Use it at your own risks, you may damage your game collection by doing mistakes! An export is strongly recommended
-     before any operation.
+   * Use it at your own risks, you may damage your game collection by doing mistakes! Ensure you have a backup of you
+     collection first!
    * This tool is not supported by BoardGameGeek, this is an independent development
    * Be respectful regarding BGG web site: this kind of automated tools can impact performance when used
      "aggressively" (plenty of requests per second). Provided features are intended to be used for
@@ -36,6 +36,7 @@ Warning:
 
 Installation
 ============
+Python 2.7 is required.
 
 ::
 
@@ -48,19 +49,22 @@ You'll need **Firefox** to be installed; Firefox will be automatically controlle
 
 Type ``bggcli`` to get the full help about available commands.
 
-Here is an example to export a collection from an account *account1* and import it to another account *account2*:::
+Here is an example to export a collection from an account *account1* and import it to another account *account2*::
 
-    $ bggcli -l account1 -p mypassword1 collection-export mycollection.csv
-    $ bggcli -l account2 -p mypassword collection-import mycollection.csv
+    $ bggcli -l mylogin1 -p mypassword1 collection-export mycollection.csv
+    $ bggcli -l mylogin2 -p mypassword2 collection-import mycollection.csv
 
 Update a collection
 -------------------
 Here are some use cases this operation could be used for:
 
-* Create a new account on BGG and transfer your collection: export the collection from the old account first, then use **bggcli** to import it
-* Make a bulk update for all or some of your games: export the collection from your account first, modify details in the CSV file (using a text editor, OpenOffice, MS Excel, or whatever) and use ``bggcli`` to import the file
+* Create a new account on BGG and transfer your collection: export the collection from the old account first, then use
+  **bggcli** to import it
+* Make a bulk update for all or some of your games: export the collection from your account first, modify details in
+  the CSV file (using a text editor, OpenOffice, MS Excel, or whatever) and use ``bggcli`` to import the file
 
-Export can be done with this tool or manually when you view your collection online.
+Export should be done with this tool to be complete. You can also do a manual export online, but you won't have
+information about the version of each game.
 
 Example:::
 
@@ -69,9 +73,10 @@ Example:::
 Notes:
 
    * Column names are those exported by BGG. Any column not recognized will just be ignored
-   * When a game already exists in your collection, game is just updated with CSV values
-   * Update is only done for fields defined in the CSV file. Other fields already filled online are not impacted. E.g. you could only update one field for all your game
-   * Games are identified by their internal ID, named ``objectid`` in CSV file (name used by BGG)
+   * When a game already exists in your collection, game is updated with provided CSV values only, other fields are not
+     impacted. You could only update one field for all your game.
+   * Games are identified by their internal ID, named ``objectid`` in CSV file (name used by BGG). Having the
+     ``objectname`` field (name of the game) is also recommended for logging.
 
 
 Remove games from a collection
@@ -105,13 +110,14 @@ Limitations
 ===========
 
 * Only *Firefox* is supported. This tools relies on Selenium to control browser, and only Firefox is supported
-  natively by Selenium (i.e. without additional requirements). Support of additional browsers could be introduced,
+  out of the box by Selenium (i.e. without additional requirements). Support of additional browsers could be introduced,
   but I'm not sure it's worth it.
 * Performance: Selenium+Firefox association is not the fastest way to automate operations, but it's
   probably the best regarding stability (no Javascript emulation, Firefox does the work) and simplicity (no need to
-  install anything else), which is the most important in the current context.
+  install anything else), which is the most important in the current context. On my laptop, I see the import taking
+  1 min for 5 games.
 * Some fields related to the game's version are not exported by BGG: the ``barcode`` and the `language``. Note
-  although this is only for custom version you define yourself, which should be rare
+  although this only applies to custom version you define yourself, which should be quite rare.
 
 
 Ideas for future versions
@@ -119,7 +125,8 @@ Ideas for future versions
 
 Here are some ideas of additional tasks that could be implemented:
 
-* Generic import for collections, based on game names and not on the BGG internal identifier. A confirmation would be required for each ambiguous name to choose among matching games
+* Generic import for collections, based on game names and not on the BGG internal identifier. A confirmation would be
+  required for each ambiguous name to choose among matching games provided by BGG
 * Update/Delete for plays
 * Update/Delete for forum subscriptions
 
