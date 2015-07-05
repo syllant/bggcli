@@ -1,0 +1,85 @@
+<items totalitems="2" termsofuse="http://boardgamegeek.com/xmlapi/termsofuse" pubdate="Sun, 05 Jul 2015 01:23:07 +0000">
+    <item objecttype="thing" objectid="68448" subtype="boardgame" collid="29121959">
+        <name sortindex="1">7 Wonders</name>
+        <yearpublished>2011</yearpublished>
+        <image>//cf.geekdo-images.com/images/pic1195914.jpg</image>
+        <thumbnail>//cf.geekdo-images.com/images/pic1195914_t.jpg</thumbnail>
+        <stats minplayers="2" maxplayers="7" minplaytime="30" maxplaytime="30" playingtime="30" numowned="42851">
+            <rating value="9">
+                <usersrated value="35305"/>
+                <average value="7.87677"/>
+                <bayesaverage value="7.79762"/>
+                <stddev value="1.26474"/>
+                <median value="0"/>
+                <ranks>
+                    <rank type="subtype" id="1" name="boardgame" friendlyname="Board Game Rank" value="19"
+                          bayesaverage="7.79762"/>
+                    <rank type="family" id="5497" name="strategygames" friendlyname="Strategy Game Rank" value="16"
+                          bayesaverage="7.76954"/>
+                    <rank type="family" id="5499" name="familygames" friendlyname="Family Game Rank" value="1"
+                          bayesaverage="7.79919"/>
+                </ranks>
+            </rating>
+        </stats>
+        <status own="1" prevowned="0" fortrade="0" want="0" wanttoplay="0" wanttobuy="0" wishlist="0" preordered="0"
+                lastmodified="2015-07-04 20:21:27"/>
+        <numplays>0</numplays>
+        <privateinfo pp_currency="USD" pricepaid="35" cv_currency="USD" currvalue="36" quantity="1"
+                     acquisitiondate="2014-01-17" acquiredfrom="Amazon">
+            <privatecomment>Some private comment</privatecomment>
+        </privateinfo>
+        <version>
+            <item type="boardgameversion" id="107117">
+                <thumbnail>//cf.geekdo-images.com/images/pic1195914_t.jpg</thumbnail>
+                <image>//cf.geekdo-images.com/images/pic1195914.jpg</image>
+                <link type="boardgameversion" id="68448" value="7 Wonders" inbound="true"/>
+                <name type="primary" sortindex="1" value="Repos French second edition"/>
+                <link type="boardgamepublisher" id="4384" value="Repos Production"/>
+                <link type="boardgameartist" id="12016" value="Miguel Coimbra"/>
+                <yearpublished value="2011"/>
+                <productcode value=""/>
+                <width value="11.7"/>
+                <length value="11.7"/>
+                <depth value="2.8"/>
+                <weight value="0"/>
+                <link type="language" id="2187" value="French"/>
+            </item>
+        </version>
+        <comment>Some public comment</comment>
+        <conditiontext>Some trade condition</conditiontext>
+        <wantpartslist>Some wantparts comment</wantpartslist>
+        <haspartslist>Some hasparts comment</haspartslist>
+        <wishlistcomment>Some wish list comment</wishlistcomment>
+    </item>
+    <item objecttype="thing" objectid="4098" subtype="boardgame" collid="29122015">
+        <name sortindex="1">Age of Steam</name>
+        <yearpublished>2002</yearpublished>
+        <image>//cf.geekdo-images.com/images/pic999.jpg</image>
+        <thumbnail>//cf.geekdo-images.com/images/pic999_t.jpg</thumbnail>
+        <stats minplayers="1" maxplayers="6" minplaytime="120" maxplaytime="120" playingtime="120" numowned="5587">
+            <rating value="N/A">
+                <usersrated value="6054"/>
+                <average value="7.73199"/>
+                <bayesaverage value="7.51"/>
+                <stddev value="1.65356"/>
+                <median value="0"/>
+                <ranks>
+                    <rank type="subtype" id="1" name="boardgame" friendlyname="Board Game Rank" value="58"
+                          bayesaverage="7.51"/>
+                    <rank type="family" id="5497" name="strategygames" friendlyname="Strategy Game Rank" value="38"
+                          bayesaverage="7.57391"/>
+                </ranks>
+            </rating>
+        </stats>
+        <status own="0" prevowned="0" fortrade="0" want="0" wanttoplay="0" wanttobuy="0" wishlist="1"
+                wishlistpriority="3" preordered="0" lastmodified="2015-07-04 18:05:18"/>
+        <numplays>0</numplays>
+        <version>
+            <imageid value="999"/>
+            <year>2000</year>
+            <publisher publisherid="888">Companion Games</publisher>
+            <other>other-version</other>
+        </version>
+        <wishlistcomment>Some wish list comment</wishlistcomment>
+    </item>
+</items>

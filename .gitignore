@@ -1,0 +1,6 @@
+*.pyc
+bggcli.egg-info
+build
+dist
+.idea/
+.coverage
