@@ -18,7 +18,7 @@ Advanced options:
     browser-profile-dir=<dir>       Path or your browser profile if you want to use an existing
 
 Arguments:
-    <file> The CSV file with games to import
+    <file> The CSV file with games to delete
 """
 import sys
 
