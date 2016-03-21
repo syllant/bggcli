@@ -57,7 +57,7 @@ def execute(args, options):
     # Use XML2 API, see https://www.boardgamegeek.com/wiki/page/BGG_XML_API2#Collection
     # Default CSV export doesn't provide version info!
     url = '%s/xmlapi2/collection?username=%s&version=1&showprivate=1&stats=1' \
-          % (BGG_BASE_URL, login)
+          % (BGG_BASE_URL, urllib2.quote(login))
     req = urllib2.Request(url, None, {'Cookie': '%s=%s' % (BGG_SESSION_COOKIE_NAME, auth_cookie)})
 
     # Get a BadStatusLine error most of times without this delay!

@@ -5,6 +5,7 @@ bgg.loginpage
 Selenium Page Object to bind the login page and perform authentication
 
 """
+import urllib2
 
 from selenium.common.exceptions import NoSuchElementException
 
@@ -47,7 +48,7 @@ class LoginPage(BasePage):
     def is_authenticated(self, login):
         try:
             self.driver.find_element_by_xpath("//div[@class='menu_login']//a[@href='/user/%s']"
-                                              % login)
+                                              % urllib2.quote(login))
             return True
         except NoSuchElementException:
             return False
